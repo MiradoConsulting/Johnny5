@@ -10,9 +10,7 @@ public class Johnny5 extends Robot {
         setAllColors(Color.WHITE);
 
         int dir = 0;
-        while (Math.abs(getHeading()) > 10) {
-            turnLeft(10);
-        }
+        turnLeft(getHeading());
 
         boolean foundWallOnce = false;
         boolean foundCorner = false;

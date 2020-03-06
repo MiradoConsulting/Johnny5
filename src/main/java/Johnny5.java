@@ -1,14 +1,17 @@
 import robocode.Robot;
 import robocode.ScannedRobotEvent;
 
+import java.awt.*;
+
 public class Johnny5 extends Robot {
 
     public void run() {
+        setAllColors(Color.ORANGE);
         while (true) {
-            ahead(1);
-            turnRight(1);
+            ahead(100);
+            turnRight(45);
             turnGunRight(360);
-            
+
         }
     }
 

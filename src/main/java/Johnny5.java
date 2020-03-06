@@ -16,7 +16,7 @@ public class Johnny5 extends Robot {
                 back(50);
                 turnLeft(90);
             }
-            ahead(100s);
+            ahead(100);
             turnGunLeft(36);
         }
 

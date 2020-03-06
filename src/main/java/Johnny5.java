@@ -18,8 +18,13 @@ public class Johnny5 extends Robot {
 
 
     public void onScannedRobot(ScannedRobotEvent e) {
-
+        if (e.getDistance() > 100)
         fire(1);
+        else if (e.getDistance() > 10)
+            fire (2.0);
+        else {
+            fire(3.0);
+        }
 
     }
 }

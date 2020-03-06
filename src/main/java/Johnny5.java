@@ -13,14 +13,28 @@ public class Johnny5 extends Robot {
         while (getHeading() > 0) {
             turnLeft(1);
         }
-
-        while (true) {
+boolean foundWallOnce = false;
+        boolean foundCorner = false;
+        while (!foundCorner) {
             if (nearWall()) {
-                back(10);
-                turnLeft(90);
-                dir = (dir + 90) % 90;
+                if (!foundWallOnce) {
+                    foundWallOnce = true;
+                    back(10);
+                    turnLeft(90);
+                    dir = (dir + 90) % 90;
+                } else {
+                    foundCorner = true;
+                }
             }
             ahead(100);
+            turnGunLeft(360);
+        }
+
+        turnLeft(135);
+        while (true) {
+            ahead(100);
+            turnGunLeft(360);
+            back(100);
             turnGunLeft(360);
         }
 

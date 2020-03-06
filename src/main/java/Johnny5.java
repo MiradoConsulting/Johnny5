@@ -4,19 +4,23 @@ import robocode.ScannedRobotEvent;
 
 import java.awt.*;
 
-public class Johnny5 extends AdvancedRobot {
+public class Johnny5 extends Robot {
 
     public void run() {
         setAllColors(Color.WHITE);
-        setTurnRight(1);
-        setAhead(10);
-        setTurnGunLeft(10);
+
+        int dir = 0;
+
         while (true) {
             if (nearWall()) {
-                turnLeft(45);
+                back(10);
+                turnLeft(90);
+                dir = (dir + 90) % 90;
             }
-            execute();
+            ahead(100);
+            turnGunLeft(360);
         }
+
     }
 
     public boolean nearWall() {

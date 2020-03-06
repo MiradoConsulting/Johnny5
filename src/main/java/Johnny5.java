@@ -11,10 +11,10 @@ public class Johnny5 extends Robot {
             if (nearWall()) {
                 turnLeft(45);
             } else {
-                ahead(5);
+                ahead(1);
                 turnRight(4.5);
             }
-            turnGunRight(360);
+            turnGunRight(36);
         }
     }
 

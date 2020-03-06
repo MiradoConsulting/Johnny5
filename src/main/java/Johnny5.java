@@ -8,11 +8,21 @@ public class Johnny5 extends Robot {
     public void run() {
         setAllColors(Color.ORANGE);
         while (true) {
-            ahead(100);
-            turnRight(45);
+            if (nearWall()) {
+                turnLeft(45);
+            } else {
+                ahead(50);
+                turnRight(45);
+            }
             turnGunRight(360);
-
         }
+    }
+
+    public boolean nearWall() {
+        return (getX() < 50) ||
+                (getX() > (getBattlefieldWidth() - 50)) ||
+                (getY() < 50) ||
+                (getY() > (getBattlefieldWidth() - 50));
     }
 
 

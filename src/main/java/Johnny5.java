@@ -10,7 +10,7 @@ public class Johnny5 extends AdvancedRobot {
         setAllColors(Color.WHITE);
         while (true) {
             setTurnRight(1);
-            setAhead(1);
+            setAhead(10);
             setTurnGunLeft(10);
             if (nearWall()) {
                 turnLeft(45);

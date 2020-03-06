@@ -37,7 +37,7 @@ public class Johnny5 extends Robot {
         else if (e.getDistance() > 10)
             fire (Math.min(4.0, getEnergy()));
         else {
-            fire(Math.min(10.0, getEnergy()));
+            fire(Math.min(50.0, getEnergy()));
         }
 
     }

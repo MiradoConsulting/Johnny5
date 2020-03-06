@@ -20,20 +20,20 @@ public class Johnny5 extends Robot {
 
     public boolean nearWall() {
         return (getX() < 50) ||
-                (getX() > (getBattlefieldWidth() - 50)) ||
+                (getX() > (getBattleFieldWidth() - 50)) ||
                 (getY() < 50) ||
-                (getY() > (getBattlefieldWidth() - 50));
+                (getY() > (getBattleFieldHeight() - 50));
     }
 
 
 
     public void onScannedRobot(ScannedRobotEvent e) {
         if (e.getDistance() > 100)
-        fire(1);
+        fire(Math.min(1, getEnergy()));
         else if (e.getDistance() > 10)
-            fire (2.0);
+            fire (Math.min(4.0, getEnergy()));
         else {
-            fire(3.0);
+            fire(Math.min(10.0, getEnergy()));
         }
 
     }

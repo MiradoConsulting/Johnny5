@@ -6,7 +6,7 @@ import java.awt.*;
 public class Johnny5 extends Robot {
 
     public void run() {
-        setAllColors(Color.ORANGE);
+        setAllColors(Color.WHITE);
         while (true) {
             if (nearWall()) {
                 turnLeft(45);

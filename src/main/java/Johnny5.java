@@ -10,6 +10,7 @@ public class Johnny5 extends Robot {
         setAllColors(Color.WHITE);
 
         turnLeft(getHeading());
+        turnGunLeft(90);
         while (true) {
             if (nearWall()) {
                 back(50);

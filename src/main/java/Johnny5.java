@@ -1,20 +1,20 @@
+import robocode.AdvancedRobot;
 import robocode.Robot;
 import robocode.ScannedRobotEvent;
 
 import java.awt.*;
 
-public class Johnny5 extends Robot {
+public class Johnny5 extends AdvancedRobot {
 
     public void run() {
         setAllColors(Color.WHITE);
         while (true) {
+            setTurnRight(1);
+            setAhead(1);
+            setTurnGunLeft(10);
             if (nearWall()) {
                 turnLeft(45);
-            } else {
-                ahead(1);
-                turnRight(4.5);
             }
-            turnGunRight(36);
         }
     }
 

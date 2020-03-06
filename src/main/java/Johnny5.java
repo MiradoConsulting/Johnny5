@@ -17,7 +17,7 @@ public class Johnny5 extends Robot {
                 turnLeft(90);
             }
             ahead(100);
-            turnGunLeft(36);
+            turnRadarLeft(36);
         }
 
     }
@@ -32,6 +32,7 @@ public class Johnny5 extends Robot {
 
 
     public void onScannedRobot(ScannedRobotEvent e) {
+        turnGunLeft(getGunHeading() - e.getHeading());
         if (e.getDistance() > 100)
         fire(Math.min(1, getEnergy()));
         else if (e.getDistance() > 10)
@@ -39,6 +40,7 @@ public class Johnny5 extends Robot {
         else {
             fire(Math.min(10.0, getEnergy()));
         }
+        turnGunLeft(getGunHeading() - getHeading());
 
     }
 }

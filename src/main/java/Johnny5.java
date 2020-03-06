@@ -13,7 +13,7 @@ public class Johnny5 extends Robot {
 
         while (true) {
             if (nearWall()) {
-                back(10);
+                back(50);
                 turnLeft(90);
             }
             ahead(100);

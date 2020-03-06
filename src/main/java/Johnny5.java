@@ -8,13 +8,14 @@ public class Johnny5 extends AdvancedRobot {
 
     public void run() {
         setAllColors(Color.WHITE);
+        setTurnRight(1);
+        setAhead(10);
+        setTurnGunLeft(10);
         while (true) {
-            setTurnRight(1);
-            setAhead(10);
-            setTurnGunLeft(10);
             if (nearWall()) {
                 turnLeft(45);
             }
+            execute();
         }
     }
 
